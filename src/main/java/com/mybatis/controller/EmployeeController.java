@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 import com.mybatis.model.Employee;
 import com.mybatis.service.EmployeeService;
 
-@WebServlet(name = "EmployeeController", urlPatterns = { "/index" })
+@WebServlet(name = "EmployeeController", urlPatterns = { "/employeeIndex" })
 public class EmployeeController extends BaseController{
 
     @Override

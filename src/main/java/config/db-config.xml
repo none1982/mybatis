@@ -8,6 +8,7 @@
 	<!-- define alias of resource xml -->
 	<typeAliases>
 		<typeAlias alias="Employee" type="com.mybatis.model.Employee" />
+		<typeAlias alias="Words" type="com.mybatis.model.Words" />
 	</typeAliases>
 	
 	<environments default="mydb">
@@ -25,5 +26,6 @@
 	
 	<mappers>
 		<mapper resource="com/mybatis/xml/EmployeeMapper.xml"/>
+		<mapper resource="com/mybatis/xml/WordsMapper.xml"/>
 	</mappers>
 </configuration>
