@@ -26,4 +26,14 @@ public class EmployeeServiceImpl extends BaseService implements EmployeeService{
 	return list;
     }
 
+    public List<Employee> findAllByName(String name) {
+	EmployeeDao dao = (EmployeeDao) daoFactory.getDao("EmployeeDao");
+	Employee e =  new Employee();
+	
+	e.setName(name);
+	List<Employee> list = dao.findAllByName(e);
+	
+	return list;
+    }
+
 }

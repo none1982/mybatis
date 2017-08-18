@@ -8,6 +8,11 @@
 <title>Insert title here</title>
 </head>
 <body>
+<form action="<%=request.getContextPath() %>/index" method="get">
+	name:<input type="text" id="name" name="name"/>
+	<input type="submit" value="submit"/>
+	<input type="hidden" id="method" name="method" value="queryName"/>
+</form>
 <c:forEach items="${list}" var="item">
 	${item.name}
 </c:forEach>
