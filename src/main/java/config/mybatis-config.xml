@@ -4,6 +4,11 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<properties resource="config/dbConfig.properties"></properties>
+	<!-- define alias of resource xml -->
+	<typeAliases>
+		<typeAlias alias="Employee" type="com.mybatis.model.Employee" />
+	</typeAliases>
+	
 	<environments default="mydb">
 		<environment id="mydb">
 			<transactionManager type="JDBC"></transactionManager>
@@ -15,6 +20,7 @@
 			</dataSource>
 		</environment>
 	</environments>
+	
 	<mappers>
 		<mapper resource="com/mybatis/xml/EmployeeMapper.xml"/>
 	</mappers>

@@ -24,14 +24,14 @@ public class EmployeeDaoImpl extends BaseDao implements EmployeeDao {
 	return list;
     }
 
-    public List<Employee> findAllById(int id) {
+    public List<Employee> findAllById(Employee employee) {
 	SqlSessionFactory sessionFactory = null;
 	
 	sessionFactory = getSessionFactory(null);
 	SqlSession sqlSession = sessionFactory.openSession(); 
 	
 	String sqlId=".findAllById";
-	List<Employee> list = sqlSession.selectList(xmlMapperId+sqlId,id);
+	List<Employee> list = sqlSession.selectList(xmlMapperId+sqlId,employee);
 	
 	return list;
     }

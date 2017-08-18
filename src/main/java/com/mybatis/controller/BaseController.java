@@ -2,14 +2,14 @@ package com.mybatis.controller;
 
 import javax.servlet.http.HttpServlet;
 
-import com.mybatis.DaoFactory;
+import com.mybatis.ServiceFactory;
 
 public class BaseController extends HttpServlet{
-    public static DaoFactory daoFactory = null;
+    public static ServiceFactory serviceFactory = null;
     
     public BaseController(){
-	if(daoFactory == null){
-	    daoFactory = new DaoFactory();
+	if(serviceFactory == null){
+	    serviceFactory = new ServiceFactory();
 	}
     }
 }

@@ -7,12 +7,15 @@ public class DaoFactory {
 
     private EmployeeDao employeeDao = null;
     
-    public EmployeeDao getDao(String daoName){
+    public Object getDao(String daoName){
 	if(daoName.equals("EmployeeDao")){
 	    if(employeeDao == null){
 		employeeDao = new EmployeeDaoImpl();
 	    }
+	    return employeeDao;
+	}else{
+	    return null;
 	}
-	return employeeDao;
+	
     }
 }

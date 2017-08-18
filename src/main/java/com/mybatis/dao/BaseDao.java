@@ -8,8 +8,9 @@ import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
 
 public class BaseDao {
+    private SqlSessionFactory sessionFactory = null; 
+    
     public SqlSessionFactory getSessionFactory(String resource) {  
-	SqlSessionFactory sessionFactory = null;  
 	 
 	try {  
 	    if( null != resource && !"".equals(resource)){
@@ -18,8 +19,8 @@ public class BaseDao {
 		sessionFactory = new SqlSessionFactoryBuilder().build(Resources.getResourceAsReader("config/mybatis-config.xml"));	
 	    }
 	} catch (IOException e) {  
-	    e.printStackTrace();  
+	    
 	}  
-		return sessionFactory;  
-	}  
+	return sessionFactory;  
+    }  
 }
